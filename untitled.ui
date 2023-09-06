@@ -46,7 +46,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_6">
+         <widget class="QPushButton" name="enhance">
           <property name="maximumSize">
            <size>
             <width>100</width>
@@ -54,12 +54,12 @@
            </size>
           </property>
           <property name="text">
-           <string>PushButton</string>
+           <string>Enhance Image</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_7">
+         <widget class="QPushButton" name="sharpen">
           <property name="maximumSize">
            <size>
             <width>100</width>
@@ -67,12 +67,12 @@
            </size>
           </property>
           <property name="text">
-           <string>PushButton</string>
+           <string>Sharpen</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_4">
+         <widget class="QPushButton" name="smooth">
           <property name="maximumSize">
            <size>
             <width>100</width>
@@ -80,12 +80,12 @@
            </size>
           </property>
           <property name="text">
-           <string>PushButton</string>
+           <string>Smooth</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_3">
+         <widget class="QPushButton" name="emboss">
           <property name="maximumSize">
            <size>
             <width>100</width>
@@ -93,12 +93,12 @@
            </size>
           </property>
           <property name="text">
-           <string>PushButton</string>
+           <string>Emboss</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="edge_enhance">
           <property name="maximumSize">
            <size>
             <width>100</width>
@@ -106,7 +106,7 @@
            </size>
           </property>
           <property name="text">
-           <string>PushButton</string>
+           <string>Edge enhance</string>
           </property>
          </widget>
         </item>
