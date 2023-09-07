@@ -11,6 +11,7 @@ class PhotoEditor(QMainWindow):
         super(PhotoEditor, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.ui.effect_slider.hide()
         self.ui.photo_choice_button.clicked.connect(self.get_image)
         self.ui.blur.clicked.connect(self.blur_image)
         self.ui.black_white.clicked.connect(self.black_white_image)

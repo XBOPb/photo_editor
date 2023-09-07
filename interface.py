@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(791, 543)
+        MainWindow.resize(807, 606)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
@@ -22,43 +22,167 @@ class Ui_MainWindow(object):
         self.verticalLayout_4 = QtWidgets.QVBoxLayout()
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.blur = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.blur.setMaximumSize(QtCore.QSize(100, 100))
+        self.blur.setMinimumSize(QtCore.QSize(90, 0))
+        self.blur.setMaximumSize(QtCore.QSize(100, 30))
+        self.blur.setStyleSheet("QPushButton {\n"
+"    color: #888888;\n"
+"    font-weight: bold;\n"
+"    border: none;\n"
+"    padding: 5px;\n"
+"    border-radius: 2px;\n"
+"    background-color: #444444;\n"
+"    min-width: 80px;\n"
+"}")
         self.blur.setObjectName("blur")
         self.verticalLayout_4.addWidget(self.blur)
         self.black_white = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.black_white.setMaximumSize(QtCore.QSize(100, 100))
+        self.black_white.setMinimumSize(QtCore.QSize(90, 0))
+        self.black_white.setMaximumSize(QtCore.QSize(100, 30))
+        self.black_white.setStyleSheet("QPushButton {\n"
+"    color: #888888;\n"
+"    font-weight: bold;\n"
+"    border: none;\n"
+"    padding: 5px;\n"
+"    border-radius: 2px;\n"
+"    background-color: #444444;\n"
+"    min-width: 80px;\n"
+"}")
         self.black_white.setObjectName("black_white")
         self.verticalLayout_4.addWidget(self.black_white)
         self.enhance = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.enhance.setMaximumSize(QtCore.QSize(100, 100))
+        self.enhance.setMinimumSize(QtCore.QSize(90, 0))
+        self.enhance.setMaximumSize(QtCore.QSize(100, 30))
+        self.enhance.setStyleSheet("QPushButton {\n"
+"    color: #888888;\n"
+"    font-weight: bold;\n"
+"    border: none;\n"
+"    padding: 5px;\n"
+"    border-radius: 2px;\n"
+"    background-color: #444444;\n"
+"    min-width: 80px;\n"
+"}")
         self.enhance.setObjectName("enhance")
         self.verticalLayout_4.addWidget(self.enhance)
         self.sharpen = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.sharpen.setMaximumSize(QtCore.QSize(100, 100))
+        self.sharpen.setMinimumSize(QtCore.QSize(90, 0))
+        self.sharpen.setMaximumSize(QtCore.QSize(100, 30))
+        self.sharpen.setStyleSheet("QPushButton {\n"
+"    color: #888888;\n"
+"    font-weight: bold;\n"
+"    border: none;\n"
+"    padding: 5px;\n"
+"    border-radius: 2px;\n"
+"    background-color: #444444;\n"
+"    min-width: 80px;\n"
+"}")
         self.sharpen.setObjectName("sharpen")
         self.verticalLayout_4.addWidget(self.sharpen)
         self.smooth = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.smooth.setMaximumSize(QtCore.QSize(100, 100))
+        self.smooth.setMinimumSize(QtCore.QSize(90, 0))
+        self.smooth.setMaximumSize(QtCore.QSize(100, 30))
+        self.smooth.setStyleSheet("QPushButton {\n"
+"    color: #888888;\n"
+"    font-weight: bold;\n"
+"    border: none;\n"
+"    padding: 5px;\n"
+"    border-radius: 2px;\n"
+"    background-color: #444444;\n"
+"    min-width: 80px;\n"
+"}")
         self.smooth.setObjectName("smooth")
         self.verticalLayout_4.addWidget(self.smooth)
         self.emboss = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.emboss.setMaximumSize(QtCore.QSize(100, 100))
+        self.emboss.setMinimumSize(QtCore.QSize(90, 0))
+        self.emboss.setMaximumSize(QtCore.QSize(100, 30))
+        self.emboss.setStyleSheet("QPushButton {\n"
+"    color: #888888;\n"
+"    font-weight: bold;\n"
+"    border: none;\n"
+"    padding: 5px;\n"
+"    border-radius: 2px;\n"
+"    background-color: #444444;\n"
+"    min-width: 80px;\n"
+"}")
         self.emboss.setObjectName("emboss")
         self.verticalLayout_4.addWidget(self.emboss)
         self.edge_enhance = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.edge_enhance.setMaximumSize(QtCore.QSize(100, 100))
+        self.edge_enhance.setMinimumSize(QtCore.QSize(90, 0))
+        self.edge_enhance.setMaximumSize(QtCore.QSize(100, 30))
+        self.edge_enhance.setStyleSheet("QPushButton {\n"
+"    color: #888888;\n"
+"    font-weight: bold;\n"
+"    border: none;\n"
+"    padding: 5px;\n"
+"    border-radius: 2px;\n"
+"    background-color: #444444;\n"
+"    min-width: 80px;\n"
+"}")
         self.edge_enhance.setObjectName("edge_enhance")
         self.verticalLayout_4.addWidget(self.edge_enhance)
         self.horizontalLayout_3.addLayout(self.verticalLayout_4)
         self.verticalLayout_6 = QtWidgets.QVBoxLayout()
         self.verticalLayout_6.setObjectName("verticalLayout_6")
         self.photo_choice_button = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.photo_choice_button.setStyleSheet("QPushButton {\n"
+"    color: #888888;\n"
+"    font-weight: bold;\n"
+"    border: none;\n"
+"    padding: 5px;\n"
+"    border-radius: 2px;\n"
+"    background-color: #444444;\n"
+"    min-width: 80px;\n"
+"}")
         self.photo_choice_button.setObjectName("photo_choice_button")
         self.verticalLayout_6.addWidget(self.photo_choice_button)
         self.image_label = QtWidgets.QLabel(parent=self.centralwidget)
         self.image_label.setText("")
         self.image_label.setObjectName("image_label")
         self.verticalLayout_6.addWidget(self.image_label)
+        self.effect_slider = QtWidgets.QSlider(parent=self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.effect_slider.sizePolicy().hasHeightForWidth())
+        self.effect_slider.setSizePolicy(sizePolicy)
+        self.effect_slider.setMinimumSize(QtCore.QSize(400, 0))
+        self.effect_slider.setMaximumSize(QtCore.QSize(400, 16777215))
+        self.effect_slider.setStyleSheet("QSlider::groove:horizontal {\n"
+"    border: 1px solid #999999;\n"
+"    height: 10px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */\n"
+"    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);\n"
+"    margin: 2px 0;\n"
+"}\n"
+"\n"
+"QSlider::handle:horizontal {\n"
+"    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);\n"
+"    border: 1px solid #5c5c5c;\n"
+"    width: 18px;\n"
+"    margin: -2px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */\n"
+"    border-radius: 3px;\n"
+"}\n"
+"\n"
+"QSlider::groove:vertical {\n"
+"    background: red;\n"
+"    position: absolute; /* absolutely position 4px from the left and right of the widget. setting margins on the widget should work too... */\n"
+"    left: 4px; right: 4px;\n"
+"}\n"
+"\n"
+"QSlider::handle:vertical {\n"
+"    height: 10px;\n"
+"    background: green;\n"
+"    margin: 0 -4px; /* expand outside the groove */\n"
+"}\n"
+"\n"
+"QSlider::add-page:vertical {\n"
+"    background: white;\n"
+"}\n"
+"\n"
+"QSlider::sub-page:vertical {\n"
+"    background: pink;\n"
+"}")
+        self.effect_slider.setOrientation(QtCore.Qt.Orientation.Horizontal)
+        self.effect_slider.setObjectName("effect_slider")
+        self.verticalLayout_6.addWidget(self.effect_slider, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.horizontalLayout_3.addLayout(self.verticalLayout_6)
         self.horizontalLayout_3.setStretch(1, 5)
         self.gridLayout.addLayout(self.horizontalLayout_3, 0, 0, 1, 1)
