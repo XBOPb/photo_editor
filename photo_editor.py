@@ -20,7 +20,7 @@ class PhotoEditor(QMainWindow):
         self.ui.smooth.clicked.connect(self.smoothen_image)
         self.ui.emboss.clicked.connect(self.emboss)
         self.ui.edge_enhance.clicked.connect(self.edge_enhance)
-
+        
     def get_image(self):
         file_dialog = QFileDialog()
         filter = "*.png *.jpeg *.jpg *.ppm *.gif *.tiff *.bmp"
@@ -35,6 +35,7 @@ class PhotoEditor(QMainWindow):
         qt_conversion = ImageQt(image).copy()
         pix = QPixmap.fromImage(qt_conversion)
         self.ui.image_label.setPixmap(pix)
+        self.ui.effect_slider.hide()
 
     def blur_image(self):
         image = Image.open(self.image_path)
@@ -50,6 +51,7 @@ class PhotoEditor(QMainWindow):
         image = Image.open(self.image_path)
         enhanced = ImageEnhance.Contrast(image).enhance(1.3)
         self.set_main_pixmap(enhanced)
+        self.ui.effect_slider.show()
     
     def sharpen_image(self):
         image = Image.open(self.image_path)

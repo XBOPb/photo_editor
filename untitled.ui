@@ -6,40 +6,122 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>807</width>
-    <height>606</height>
+    <width>836</width>
+    <height>630</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>PhotoEditor</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(68, 68, 68);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">color: rgb(68, 68, 68);</string>
+   </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,5">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
-         <widget class="QPushButton" name="blur">
+         <widget class="QToolButton" name="blur_2">
           <property name="minimumSize">
            <size>
-            <width>90</width>
+            <width>115</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>100</width>
+            <width>115</width>
+            <height>60</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QToolButton {
+	color: #CACACA;
+	font-weight: bold;
+	border: 3px solid white;
+    border-color: #888888;
+	padding: 5px;
+    border-radius: 15px;
+    background-color: #444444;
+    min-width: 80px;
+}</string>
+          </property>
+          <property name="text">
+           <string>Open Fine Tuning</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>crown.png</normaloff>crown.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="toolButtonStyle">
+           <enum>Qt::ToolButtonTextUnderIcon</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="enhance">
+          <property name="minimumSize">
+           <size>
+            <width>96</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>115</width>
             <height>30</height>
            </size>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	color: #888888;
+	color: #CACACA;
 	font-weight: bold;
-    border: none;
+	border: 3px solid white;
+    border-color: #888888;
 	padding: 5px;
-    border-radius: 2px;
+    border-radius: 15px;
+    background-color: #444444;
+    min-width: 80px;
+}</string>
+          </property>
+          <property name="text">
+           <string>Enhance Image</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="blur">
+          <property name="minimumSize">
+           <size>
+            <width>96</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>115</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	color: #CACACA;
+	font-weight: bold;
+	border: 3px solid white;
+    border-color: #888888;
+	padding: 5px;
+    border-radius: 15px;
     background-color: #444444;
     min-width: 80px;
 }</string>
@@ -53,23 +135,24 @@
          <widget class="QPushButton" name="black_white">
           <property name="minimumSize">
            <size>
-            <width>90</width>
+            <width>96</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>100</width>
+            <width>115</width>
             <height>30</height>
            </size>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	color: #888888;
+	color: #CACACA;
 	font-weight: bold;
-    border: none;
+	border: 3px solid white;
+    border-color: #888888;
 	padding: 5px;
-    border-radius: 2px;
+    border-radius: 15px;
     background-color: #444444;
     min-width: 80px;
 }</string>
@@ -80,56 +163,27 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="enhance">
-          <property name="minimumSize">
-           <size>
-            <width>90</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>100</width>
-            <height>30</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-	color: #888888;
-	font-weight: bold;
-    border: none;
-	padding: 5px;
-    border-radius: 2px;
-    background-color: #444444;
-    min-width: 80px;
-}</string>
-          </property>
-          <property name="text">
-           <string>Enhance Image</string>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QPushButton" name="sharpen">
           <property name="minimumSize">
            <size>
-            <width>90</width>
+            <width>96</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>100</width>
+            <width>115</width>
             <height>30</height>
            </size>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	color: #888888;
+	color: #CACACA;
 	font-weight: bold;
-    border: none;
+	border: 3px solid white;
+    border-color: #888888;
 	padding: 5px;
-    border-radius: 2px;
+    border-radius: 15px;
     background-color: #444444;
     min-width: 80px;
 }</string>
@@ -143,23 +197,24 @@
          <widget class="QPushButton" name="smooth">
           <property name="minimumSize">
            <size>
-            <width>90</width>
+            <width>96</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>100</width>
+            <width>115</width>
             <height>30</height>
            </size>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	color: #888888;
+	color: #CACACA;
 	font-weight: bold;
-    border: none;
+	border: 3px solid white;
+    border-color: #888888;
 	padding: 5px;
-    border-radius: 2px;
+    border-radius: 15px;
     background-color: #444444;
     min-width: 80px;
 }</string>
@@ -173,23 +228,24 @@
          <widget class="QPushButton" name="emboss">
           <property name="minimumSize">
            <size>
-            <width>90</width>
+            <width>96</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>100</width>
+            <width>115</width>
             <height>30</height>
            </size>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	color: #888888;
+	color: #CACACA;
 	font-weight: bold;
-    border: none;
+	border: 3px solid white;
+    border-color: #888888;
 	padding: 5px;
-    border-radius: 2px;
+    border-radius: 15px;
     background-color: #444444;
     min-width: 80px;
 }</string>
@@ -203,23 +259,24 @@
          <widget class="QPushButton" name="edge_enhance">
           <property name="minimumSize">
            <size>
-            <width>90</width>
+            <width>96</width>
             <height>0</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>100</width>
+            <width>115</width>
             <height>30</height>
            </size>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	color: #888888;
+	color: #CACACA;
 	font-weight: bold;
-    border: none;
+	border: 3px solid white;
+    border-color: #888888;
 	padding: 5px;
-    border-radius: 2px;
+    border-radius: 15px;
     background-color: #444444;
     min-width: 80px;
 }</string>
@@ -237,11 +294,12 @@
          <widget class="QPushButton" name="photo_choice_button">
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	color: #888888;
+	color: #CACACA;
 	font-weight: bold;
-    border: none;
+	border: 3px solid white;
+    border-color: #888888;
 	padding: 5px;
-    border-radius: 2px;
+    border-radius: 15px;
     background-color: #444444;
     min-width: 80px;
 }</string>
