@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>836</width>
-    <height>630</height>
+    <width>770</width>
+    <height>499</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,54 +26,82 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
-         <widget class="QToolButton" name="blur_2">
-          <property name="minimumSize">
-           <size>
-            <width>115</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>115</width>
-            <height>60</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QToolButton {
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="undo">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
 	color: #CACACA;
 	font-weight: bold;
-	border: 3px solid white;
+	border: 1px solid white;
     border-color: #888888;
 	padding: 5px;
     border-radius: 15px;
     background-color: #444444;
-    min-width: 80px;
 }</string>
-          </property>
-          <property name="text">
-           <string>Open Fine Tuning</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>crown.png</normaloff>crown.png</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="toolButtonStyle">
-           <enum>Qt::ToolButtonTextUnderIcon</enum>
-          </property>
-         </widget>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>undo.png</normaloff>undo.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="redo">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	color: #CACACA;
+	font-weight: bold;
+	border: 1px solid white;
+    border-color: #888888;
+	padding: 5px;
+    border-radius: 15px;
+    background-color: #444444;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>undo.png</normaloff>undo.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
         <item>
          <widget class="QPushButton" name="enhance">
           <property name="minimumSize">
            <size>
-            <width>96</width>
+            <width>115</width>
             <height>0</height>
            </size>
           </property>
@@ -87,7 +115,7 @@
            <string notr="true">QPushButton {
 	color: #CACACA;
 	font-weight: bold;
-	border: 3px solid white;
+	border: 1px solid white;
     border-color: #888888;
 	padding: 5px;
     border-radius: 15px;
@@ -104,7 +132,7 @@
          <widget class="QPushButton" name="blur">
           <property name="minimumSize">
            <size>
-            <width>96</width>
+            <width>115</width>
             <height>0</height>
            </size>
           </property>
@@ -118,7 +146,7 @@
            <string notr="true">QPushButton {
 	color: #CACACA;
 	font-weight: bold;
-	border: 3px solid white;
+	border: 1px solid white;
     border-color: #888888;
 	padding: 5px;
     border-radius: 15px;
@@ -135,7 +163,7 @@
          <widget class="QPushButton" name="black_white">
           <property name="minimumSize">
            <size>
-            <width>96</width>
+            <width>115</width>
             <height>0</height>
            </size>
           </property>
@@ -149,7 +177,7 @@
            <string notr="true">QPushButton {
 	color: #CACACA;
 	font-weight: bold;
-	border: 3px solid white;
+	border: 1px solid white;
     border-color: #888888;
 	padding: 5px;
     border-radius: 15px;
@@ -166,7 +194,7 @@
          <widget class="QPushButton" name="sharpen">
           <property name="minimumSize">
            <size>
-            <width>96</width>
+            <width>115</width>
             <height>0</height>
            </size>
           </property>
@@ -180,7 +208,7 @@
            <string notr="true">QPushButton {
 	color: #CACACA;
 	font-weight: bold;
-	border: 3px solid white;
+	border: 1px solid white;
     border-color: #888888;
 	padding: 5px;
     border-radius: 15px;
@@ -197,7 +225,7 @@
          <widget class="QPushButton" name="smooth">
           <property name="minimumSize">
            <size>
-            <width>96</width>
+            <width>115</width>
             <height>0</height>
            </size>
           </property>
@@ -211,7 +239,7 @@
            <string notr="true">QPushButton {
 	color: #CACACA;
 	font-weight: bold;
-	border: 3px solid white;
+	border: 1px solid white;
     border-color: #888888;
 	padding: 5px;
     border-radius: 15px;
@@ -228,7 +256,7 @@
          <widget class="QPushButton" name="emboss">
           <property name="minimumSize">
            <size>
-            <width>96</width>
+            <width>115</width>
             <height>0</height>
            </size>
           </property>
@@ -242,7 +270,7 @@
            <string notr="true">QPushButton {
 	color: #CACACA;
 	font-weight: bold;
-	border: 3px solid white;
+	border: 1px solid white;
     border-color: #888888;
 	padding: 5px;
     border-radius: 15px;
@@ -259,7 +287,7 @@
          <widget class="QPushButton" name="edge_enhance">
           <property name="minimumSize">
            <size>
-            <width>96</width>
+            <width>115</width>
             <height>0</height>
            </size>
           </property>
@@ -273,7 +301,7 @@
            <string notr="true">QPushButton {
 	color: #CACACA;
 	font-weight: bold;
-	border: 3px solid white;
+	border: 1px solid white;
     border-color: #888888;
 	padding: 5px;
     border-radius: 15px;
@@ -296,7 +324,7 @@
            <string notr="true">QPushButton {
 	color: #CACACA;
 	font-weight: bold;
-	border: 3px solid white;
+	border: 1px solid white;
     border-color: #888888;
 	padding: 5px;
     border-radius: 15px;

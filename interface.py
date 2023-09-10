@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(836, 630)
+        MainWindow.resize(770, 499)
         MainWindow.setStyleSheet("background-color: rgb(68, 68, 68);")
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setStyleSheet("color: rgb(68, 68, 68);")
@@ -23,33 +23,50 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout()
         self.verticalLayout_4.setObjectName("verticalLayout_4")
-        self.blur_2 = QtWidgets.QToolButton(parent=self.centralwidget)
-        self.blur_2.setMinimumSize(QtCore.QSize(115, 0))
-        self.blur_2.setMaximumSize(QtCore.QSize(115, 60))
-        self.blur_2.setStyleSheet("QToolButton {\n"
+        self.gridLayout_2 = QtWidgets.QGridLayout()
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.undo = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.undo.setMinimumSize(QtCore.QSize(0, 0))
+        self.undo.setMaximumSize(QtCore.QSize(30, 30))
+        self.undo.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
 "    font-weight: bold;\n"
-"    border: 3px solid white;\n"
+"    border: 1px solid white;\n"
 "    border-color: #888888;\n"
 "    padding: 5px;\n"
 "    border-radius: 15px;\n"
 "    background-color: #444444;\n"
-"    min-width: 80px;\n"
 "}")
+        self.undo.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("crown.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.blur_2.setIcon(icon)
-        self.blur_2.setIconSize(QtCore.QSize(32, 32))
-        self.blur_2.setToolButtonStyle(QtCore.Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
-        self.blur_2.setObjectName("blur_2")
-        self.verticalLayout_4.addWidget(self.blur_2)
+        icon.addPixmap(QtGui.QPixmap("undo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.undo.setIcon(icon)
+        self.undo.setObjectName("undo")
+        self.gridLayout_2.addWidget(self.undo, 0, 0, 1, 1)
+        self.redo = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.redo.setMinimumSize(QtCore.QSize(0, 0))
+        self.redo.setMaximumSize(QtCore.QSize(30, 30))
+        self.redo.setStyleSheet("QPushButton {\n"
+"    color: #CACACA;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid white;\n"
+"    border-color: #888888;\n"
+"    padding: 5px;\n"
+"    border-radius: 15px;\n"
+"    background-color: #444444;\n"
+"}")
+        self.redo.setText("")
+        self.redo.setIcon(icon)
+        self.redo.setObjectName("redo")
+        self.gridLayout_2.addWidget(self.redo, 0, 1, 1, 1)
+        self.verticalLayout_4.addLayout(self.gridLayout_2)
         self.enhance = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.enhance.setMinimumSize(QtCore.QSize(96, 0))
+        self.enhance.setMinimumSize(QtCore.QSize(115, 0))
         self.enhance.setMaximumSize(QtCore.QSize(115, 30))
         self.enhance.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
 "    font-weight: bold;\n"
-"    border: 3px solid white;\n"
+"    border: 1px solid white;\n"
 "    border-color: #888888;\n"
 "    padding: 5px;\n"
 "    border-radius: 15px;\n"
@@ -59,12 +76,12 @@ class Ui_MainWindow(object):
         self.enhance.setObjectName("enhance")
         self.verticalLayout_4.addWidget(self.enhance)
         self.blur = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.blur.setMinimumSize(QtCore.QSize(96, 0))
+        self.blur.setMinimumSize(QtCore.QSize(115, 0))
         self.blur.setMaximumSize(QtCore.QSize(115, 30))
         self.blur.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
 "    font-weight: bold;\n"
-"    border: 3px solid white;\n"
+"    border: 1px solid white;\n"
 "    border-color: #888888;\n"
 "    padding: 5px;\n"
 "    border-radius: 15px;\n"
@@ -74,12 +91,12 @@ class Ui_MainWindow(object):
         self.blur.setObjectName("blur")
         self.verticalLayout_4.addWidget(self.blur)
         self.black_white = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.black_white.setMinimumSize(QtCore.QSize(96, 0))
+        self.black_white.setMinimumSize(QtCore.QSize(115, 0))
         self.black_white.setMaximumSize(QtCore.QSize(115, 30))
         self.black_white.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
 "    font-weight: bold;\n"
-"    border: 3px solid white;\n"
+"    border: 1px solid white;\n"
 "    border-color: #888888;\n"
 "    padding: 5px;\n"
 "    border-radius: 15px;\n"
@@ -89,12 +106,12 @@ class Ui_MainWindow(object):
         self.black_white.setObjectName("black_white")
         self.verticalLayout_4.addWidget(self.black_white)
         self.sharpen = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.sharpen.setMinimumSize(QtCore.QSize(96, 0))
+        self.sharpen.setMinimumSize(QtCore.QSize(115, 0))
         self.sharpen.setMaximumSize(QtCore.QSize(115, 30))
         self.sharpen.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
 "    font-weight: bold;\n"
-"    border: 3px solid white;\n"
+"    border: 1px solid white;\n"
 "    border-color: #888888;\n"
 "    padding: 5px;\n"
 "    border-radius: 15px;\n"
@@ -104,12 +121,12 @@ class Ui_MainWindow(object):
         self.sharpen.setObjectName("sharpen")
         self.verticalLayout_4.addWidget(self.sharpen)
         self.smooth = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.smooth.setMinimumSize(QtCore.QSize(96, 0))
+        self.smooth.setMinimumSize(QtCore.QSize(115, 0))
         self.smooth.setMaximumSize(QtCore.QSize(115, 30))
         self.smooth.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
 "    font-weight: bold;\n"
-"    border: 3px solid white;\n"
+"    border: 1px solid white;\n"
 "    border-color: #888888;\n"
 "    padding: 5px;\n"
 "    border-radius: 15px;\n"
@@ -119,12 +136,12 @@ class Ui_MainWindow(object):
         self.smooth.setObjectName("smooth")
         self.verticalLayout_4.addWidget(self.smooth)
         self.emboss = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.emboss.setMinimumSize(QtCore.QSize(96, 0))
+        self.emboss.setMinimumSize(QtCore.QSize(115, 0))
         self.emboss.setMaximumSize(QtCore.QSize(115, 30))
         self.emboss.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
 "    font-weight: bold;\n"
-"    border: 3px solid white;\n"
+"    border: 1px solid white;\n"
 "    border-color: #888888;\n"
 "    padding: 5px;\n"
 "    border-radius: 15px;\n"
@@ -134,12 +151,12 @@ class Ui_MainWindow(object):
         self.emboss.setObjectName("emboss")
         self.verticalLayout_4.addWidget(self.emboss)
         self.edge_enhance = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.edge_enhance.setMinimumSize(QtCore.QSize(96, 0))
+        self.edge_enhance.setMinimumSize(QtCore.QSize(115, 0))
         self.edge_enhance.setMaximumSize(QtCore.QSize(115, 30))
         self.edge_enhance.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
 "    font-weight: bold;\n"
-"    border: 3px solid white;\n"
+"    border: 1px solid white;\n"
 "    border-color: #888888;\n"
 "    padding: 5px;\n"
 "    border-radius: 15px;\n"
@@ -155,7 +172,7 @@ class Ui_MainWindow(object):
         self.photo_choice_button.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
 "    font-weight: bold;\n"
-"    border: 3px solid white;\n"
+"    border: 1px solid white;\n"
 "    border-color: #888888;\n"
 "    padding: 5px;\n"
 "    border-radius: 15px;\n"
@@ -224,7 +241,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "PhotoEditor"))
-        self.blur_2.setText(_translate("MainWindow", "Open Fine Tuning"))
         self.enhance.setText(_translate("MainWindow", "Enhance Image"))
         self.blur.setText(_translate("MainWindow", "Blur"))
         self.black_white.setText(_translate("MainWindow", "Black/White"))

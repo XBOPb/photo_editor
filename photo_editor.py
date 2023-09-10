@@ -13,6 +13,9 @@ class PhotoEditor(QMainWindow):
         self.ui.setupUi(self)
         self.ui.effect_slider.hide()
         self.ui.photo_choice_button.clicked.connect(self.get_image)
+        self.ui.undo.clicked.connect(self.undo)
+        self.ui.redo.clicked.connect(self.redo)
+        
         self.ui.blur.clicked.connect(self.blur_image)
         self.ui.black_white.clicked.connect(self.black_white_image)
         self.ui.enhance.clicked.connect(self.enhance_image)
@@ -30,47 +33,57 @@ class PhotoEditor(QMainWindow):
     def set_image(self, image_path):
         pix = QPixmap(image_path)
         self.ui.image_label.setPixmap(pix)
+        self.current_image = pix
 
     def set_main_pixmap(self, image):
         qt_conversion = ImageQt(image).copy()
         pix = QPixmap.fromImage(qt_conversion)
         self.ui.image_label.setPixmap(pix)
         self.ui.effect_slider.hide()
+        self.current_image = pix
+
+    def undo(self):
+        self.next_image = Image.fromqpixmap(self.current_image)
+        self.set_main_pixmap(self.previous_image)
+    
+    def redo(self):
+        self.previous_image = Image.fromqpixmap(self.current_image)
+        self.set_main_pixmap(self.next_image)
 
     def blur_image(self):
-        image = Image.open(self.image_path)
-        blurred = image.filter(ImageFilter.BLUR)
+        self.previous_image = Image.fromqpixmap(self.current_image)
+        blurred = self.previous_image.filter(ImageFilter.BLUR)
         self.set_main_pixmap(blurred)
 
     def black_white_image(self):
-        image = Image.open(self.image_path)
-        black_white = image.convert('L')
+        self.previous_image = Image.fromqpixmap(self.current_image)
+        black_white = self.previous_image.convert('L')
         self.set_main_pixmap(black_white)
 
     def enhance_image(self):
-        image = Image.open(self.image_path)
-        enhanced = ImageEnhance.Contrast(image).enhance(1.3)
+        self.previous_image = Image.fromqpixmap(self.current_image)
+        enhanced = ImageEnhance.Contrast(self.previous_image).enhance(1.3)
         self.set_main_pixmap(enhanced)
         self.ui.effect_slider.show()
     
     def sharpen_image(self):
-        image = Image.open(self.image_path)
-        sharp = image.filter(ImageFilter.SHARPEN)
+        self.previous_image = Image.fromqpixmap(self.current_image)
+        sharp = self.previous_image.filter(ImageFilter.SHARPEN)
         self.set_main_pixmap(sharp)
     
     def smoothen_image(self):
-        image = Image.open(self.image_path)
-        smooth = image.filter(ImageFilter.SMOOTH)
+        self.previous_image = Image.fromqpixmap(self.current_image)
+        smooth = self.previous_image.filter(ImageFilter.SMOOTH)
         self.set_main_pixmap(smooth)
 
     def emboss(self):
-        image = Image.open(self.image_path)
-        embossed = image.filter(ImageFilter.EMBOSS)
+        self.previous_image = Image.fromqpixmap(self.current_image)
+        embossed = self.previous_image.filter(ImageFilter.EMBOSS)
         self.set_main_pixmap(embossed)
 
     def edge_enhance(self):
-        image = Image.open(self.image_path)
-        edge_enhanced = image.filter(ImageFilter.EDGE_ENHANCE_MORE)
+        self.previous_image = Image.fromqpixmap(self.current_image)
+        edge_enhanced = self.previous_image.filter(ImageFilter.EDGE_ENHANCE_MORE)
         self.set_main_pixmap(edge_enhanced)
 
 
