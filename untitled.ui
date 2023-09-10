@@ -27,41 +27,7 @@
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
          <layout class="QGridLayout" name="gridLayout_2">
-          <item row="0" column="0">
-           <widget class="QPushButton" name="undo">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>30</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-	color: #CACACA;
-	font-weight: bold;
-	border: 1px solid white;
-    border-color: #888888;
-	padding: 5px;
-    border-radius: 15px;
-    background-color: #444444;
-}</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>undo.png</normaloff>undo.png</iconset>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
+          <item row="1" column="1">
            <widget class="QPushButton" name="redo">
             <property name="minimumSize">
              <size>
@@ -71,8 +37,48 @@
             </property>
             <property name="maximumSize">
              <size>
-              <width>30</width>
-              <height>30</height>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	color: #CACACA;
+	font-weight: bold;
+	border: 1px solid white;
+    border-color: #888888;
+	padding: 5px;
+    border-radius: 15px;
+    background-color: #444444;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>redo.png</normaloff>redo.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="undo">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
              </size>
             </property>
             <property name="styleSheet">
@@ -93,6 +99,92 @@
              <iconset>
               <normaloff>undo.png</normaloff>undo.png</iconset>
             </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="save_file">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	color: #CACACA;
+	font-weight: bold;
+	border: 1px solid white;
+    border-color: #888888;
+	padding: 5px;
+    border-radius: 15px;
+    background-color: #444444;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>save.webp</normaloff>save.webp</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>29</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="open_file">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	color: #CACACA;
+	font-weight: bold;
+	border: 1px solid white;
+    border-color: #888888;
+	padding: 5px;
+    border-radius: 15px;
+    background-color: #444444;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>open.png</normaloff>open.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
            </widget>
           </item>
          </layout>
@@ -101,7 +193,7 @@
          <widget class="QPushButton" name="enhance">
           <property name="minimumSize">
            <size>
-            <width>115</width>
+            <width>92</width>
             <height>0</height>
            </size>
           </property>
@@ -132,7 +224,7 @@
          <widget class="QPushButton" name="blur">
           <property name="minimumSize">
            <size>
-            <width>115</width>
+            <width>92</width>
             <height>0</height>
            </size>
           </property>
@@ -163,7 +255,7 @@
          <widget class="QPushButton" name="black_white">
           <property name="minimumSize">
            <size>
-            <width>115</width>
+            <width>92</width>
             <height>0</height>
            </size>
           </property>
@@ -194,7 +286,7 @@
          <widget class="QPushButton" name="sharpen">
           <property name="minimumSize">
            <size>
-            <width>115</width>
+            <width>92</width>
             <height>0</height>
            </size>
           </property>
@@ -225,7 +317,7 @@
          <widget class="QPushButton" name="smooth">
           <property name="minimumSize">
            <size>
-            <width>115</width>
+            <width>92</width>
             <height>0</height>
            </size>
           </property>
@@ -256,7 +348,7 @@
          <widget class="QPushButton" name="emboss">
           <property name="minimumSize">
            <size>
-            <width>115</width>
+            <width>92</width>
             <height>0</height>
            </size>
           </property>
@@ -287,7 +379,7 @@
          <widget class="QPushButton" name="edge_enhance">
           <property name="minimumSize">
            <size>
-            <width>115</width>
+            <width>92</width>
             <height>0</height>
            </size>
           </property>
@@ -318,25 +410,6 @@
       </item>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_6">
-        <item>
-         <widget class="QPushButton" name="photo_choice_button">
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-	color: #CACACA;
-	font-weight: bold;
-	border: 1px solid white;
-    border-color: #888888;
-	padding: 5px;
-    border-radius: 15px;
-    background-color: #444444;
-    min-width: 80px;
-}</string>
-          </property>
-          <property name="text">
-           <string>Choose your photo</string>
-          </property>
-         </widget>
-        </item>
         <item>
          <widget class="QLabel" name="image_label">
           <property name="text">

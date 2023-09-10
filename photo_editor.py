@@ -12,7 +12,8 @@ class PhotoEditor(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.effect_slider.hide()
-        self.ui.photo_choice_button.clicked.connect(self.get_image)
+        self.ui.open_file.clicked.connect(self.get_image)
+        self.ui.save_file.clicked.connect(self.save)
         self.ui.undo.clicked.connect(self.undo)
         self.ui.redo.clicked.connect(self.redo)
         
@@ -41,6 +42,12 @@ class PhotoEditor(QMainWindow):
         self.ui.image_label.setPixmap(pix)
         self.ui.effect_slider.hide()
         self.current_image = pix
+
+    def save(self):
+        file_dialog = QFileDialog()
+        save_name = QFileDialog.getSaveFileName(file_dialog)
+        if save_name:
+            self.current_image.save(save_name[0])
 
     def undo(self):
         self.next_image = Image.fromqpixmap(self.current_image)

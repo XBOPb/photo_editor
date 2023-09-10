@@ -25,27 +25,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.gridLayout_2 = QtWidgets.QGridLayout()
         self.gridLayout_2.setObjectName("gridLayout_2")
-        self.undo = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.undo.setMinimumSize(QtCore.QSize(0, 0))
-        self.undo.setMaximumSize(QtCore.QSize(30, 30))
-        self.undo.setStyleSheet("QPushButton {\n"
-"    color: #CACACA;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid white;\n"
-"    border-color: #888888;\n"
-"    padding: 5px;\n"
-"    border-radius: 15px;\n"
-"    background-color: #444444;\n"
-"}")
-        self.undo.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("undo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.undo.setIcon(icon)
-        self.undo.setObjectName("undo")
-        self.gridLayout_2.addWidget(self.undo, 0, 0, 1, 1)
         self.redo = QtWidgets.QPushButton(parent=self.centralwidget)
         self.redo.setMinimumSize(QtCore.QSize(0, 0))
-        self.redo.setMaximumSize(QtCore.QSize(30, 30))
+        self.redo.setMaximumSize(QtCore.QSize(35, 35))
         self.redo.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
 "    font-weight: bold;\n"
@@ -56,12 +38,72 @@ class Ui_MainWindow(object):
 "    background-color: #444444;\n"
 "}")
         self.redo.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("redo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.redo.setIcon(icon)
+        self.redo.setIconSize(QtCore.QSize(25, 25))
         self.redo.setObjectName("redo")
-        self.gridLayout_2.addWidget(self.redo, 0, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.redo, 1, 1, 1, 1)
+        self.undo = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.undo.setMinimumSize(QtCore.QSize(0, 0))
+        self.undo.setMaximumSize(QtCore.QSize(35, 35))
+        self.undo.setStyleSheet("QPushButton {\n"
+"    color: #CACACA;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid white;\n"
+"    border-color: #888888;\n"
+"    padding: 5px;\n"
+"    border-radius: 15px;\n"
+"    background-color: #444444;\n"
+"}")
+        self.undo.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("undo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.undo.setIcon(icon1)
+        self.undo.setIconSize(QtCore.QSize(25, 25))
+        self.undo.setObjectName("undo")
+        self.gridLayout_2.addWidget(self.undo, 1, 0, 1, 1)
+        self.save_file = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.save_file.setMinimumSize(QtCore.QSize(0, 0))
+        self.save_file.setMaximumSize(QtCore.QSize(35, 35))
+        self.save_file.setStyleSheet("QPushButton {\n"
+"    color: #CACACA;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid white;\n"
+"    border-color: #888888;\n"
+"    padding: 5px;\n"
+"    border-radius: 15px;\n"
+"    background-color: #444444;\n"
+"}")
+        self.save_file.setText("")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("save.webp"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.save_file.setIcon(icon2)
+        self.save_file.setIconSize(QtCore.QSize(29, 29))
+        self.save_file.setObjectName("save_file")
+        self.gridLayout_2.addWidget(self.save_file, 0, 1, 1, 1)
+        self.open_file = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.open_file.setMinimumSize(QtCore.QSize(0, 0))
+        self.open_file.setMaximumSize(QtCore.QSize(35, 35))
+        self.open_file.setStyleSheet("QPushButton {\n"
+"    color: #CACACA;\n"
+"    font-weight: bold;\n"
+"    border: 1px solid white;\n"
+"    border-color: #888888;\n"
+"    padding: 5px;\n"
+"    border-radius: 15px;\n"
+"    background-color: #444444;\n"
+"}")
+        self.open_file.setText("")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("open.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.open_file.setIcon(icon3)
+        self.open_file.setIconSize(QtCore.QSize(25, 25))
+        self.open_file.setObjectName("open_file")
+        self.gridLayout_2.addWidget(self.open_file, 0, 0, 1, 1)
         self.verticalLayout_4.addLayout(self.gridLayout_2)
         self.enhance = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.enhance.setMinimumSize(QtCore.QSize(115, 0))
+        self.enhance.setMinimumSize(QtCore.QSize(92, 0))
         self.enhance.setMaximumSize(QtCore.QSize(115, 30))
         self.enhance.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
@@ -76,7 +118,7 @@ class Ui_MainWindow(object):
         self.enhance.setObjectName("enhance")
         self.verticalLayout_4.addWidget(self.enhance)
         self.blur = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.blur.setMinimumSize(QtCore.QSize(115, 0))
+        self.blur.setMinimumSize(QtCore.QSize(92, 0))
         self.blur.setMaximumSize(QtCore.QSize(115, 30))
         self.blur.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
@@ -91,7 +133,7 @@ class Ui_MainWindow(object):
         self.blur.setObjectName("blur")
         self.verticalLayout_4.addWidget(self.blur)
         self.black_white = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.black_white.setMinimumSize(QtCore.QSize(115, 0))
+        self.black_white.setMinimumSize(QtCore.QSize(92, 0))
         self.black_white.setMaximumSize(QtCore.QSize(115, 30))
         self.black_white.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
@@ -106,7 +148,7 @@ class Ui_MainWindow(object):
         self.black_white.setObjectName("black_white")
         self.verticalLayout_4.addWidget(self.black_white)
         self.sharpen = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.sharpen.setMinimumSize(QtCore.QSize(115, 0))
+        self.sharpen.setMinimumSize(QtCore.QSize(92, 0))
         self.sharpen.setMaximumSize(QtCore.QSize(115, 30))
         self.sharpen.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
@@ -121,7 +163,7 @@ class Ui_MainWindow(object):
         self.sharpen.setObjectName("sharpen")
         self.verticalLayout_4.addWidget(self.sharpen)
         self.smooth = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.smooth.setMinimumSize(QtCore.QSize(115, 0))
+        self.smooth.setMinimumSize(QtCore.QSize(92, 0))
         self.smooth.setMaximumSize(QtCore.QSize(115, 30))
         self.smooth.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
@@ -136,7 +178,7 @@ class Ui_MainWindow(object):
         self.smooth.setObjectName("smooth")
         self.verticalLayout_4.addWidget(self.smooth)
         self.emboss = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.emboss.setMinimumSize(QtCore.QSize(115, 0))
+        self.emboss.setMinimumSize(QtCore.QSize(92, 0))
         self.emboss.setMaximumSize(QtCore.QSize(115, 30))
         self.emboss.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
@@ -151,7 +193,7 @@ class Ui_MainWindow(object):
         self.emboss.setObjectName("emboss")
         self.verticalLayout_4.addWidget(self.emboss)
         self.edge_enhance = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.edge_enhance.setMinimumSize(QtCore.QSize(115, 0))
+        self.edge_enhance.setMinimumSize(QtCore.QSize(92, 0))
         self.edge_enhance.setMaximumSize(QtCore.QSize(115, 30))
         self.edge_enhance.setStyleSheet("QPushButton {\n"
 "    color: #CACACA;\n"
@@ -168,19 +210,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.addLayout(self.verticalLayout_4)
         self.verticalLayout_6 = QtWidgets.QVBoxLayout()
         self.verticalLayout_6.setObjectName("verticalLayout_6")
-        self.photo_choice_button = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.photo_choice_button.setStyleSheet("QPushButton {\n"
-"    color: #CACACA;\n"
-"    font-weight: bold;\n"
-"    border: 1px solid white;\n"
-"    border-color: #888888;\n"
-"    padding: 5px;\n"
-"    border-radius: 15px;\n"
-"    background-color: #444444;\n"
-"    min-width: 80px;\n"
-"}")
-        self.photo_choice_button.setObjectName("photo_choice_button")
-        self.verticalLayout_6.addWidget(self.photo_choice_button)
         self.image_label = QtWidgets.QLabel(parent=self.centralwidget)
         self.image_label.setText("")
         self.image_label.setObjectName("image_label")
@@ -248,7 +277,6 @@ class Ui_MainWindow(object):
         self.smooth.setText(_translate("MainWindow", "Smooth"))
         self.emboss.setText(_translate("MainWindow", "Emboss"))
         self.edge_enhance.setText(_translate("MainWindow", "Edge enhance"))
-        self.photo_choice_button.setText(_translate("MainWindow", "Choose your photo"))
 
 
 if __name__ == "__main__":
